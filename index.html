@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+
+<html lang="es">
+
+<head>
+    <link type="text/css" rel="stylesheet" href="style.css"/>
+
+  <meta charset="UTF-8">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <meta name="description" content="Portafolio académico y profesional de Rosmeri Donacien Feinor, estudiante de Informática.">
+
+  <meta name="keywords" content="Rosmeri Donacien Feinor, informática, portafolio, pasantía, estudiante">
+
+  <meta name="author" content="Rosmeri Donacien Feinor">
+
+  <title>Rosmeri Donacien Feinor | Portafolio</title>
+
+
+
+  <!-- Bootstrap 5.3.3 -->
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Font Awesome 6.5.1 -->
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet">
+
+  
+
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body class="dark">
+
+  <nav class="navbar navbar-expand-lg fixed-top portfolio-nav" aria-label="Navegación principal">
+
+    <div class="container">
+
+      <a class="navbar-brand fw-bold" href="#inicio">R<span>.</span>DF</a>
+
+      <div class="nav-actions">
+
+        <button class="btn theme-toggle" id="themeToggle" type="button" aria-label="Cambiar a modo claro" title="Modo claro"><span id="themeIcon"></span></button>
+
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menuPrincipal"
+
+          aria-controls="menuPrincipal" aria-expanded="false" aria-label="Abrir menú">
+
+          <span class="navbar-toggler-icon"></span>
+
+        </button>
+
+      </div>
+
+      <div class="collapse navbar-collapse" id="menuPrincipal">
+
+        <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-2">
+
+          <li class="nav-item"><a class="nav-link" href="#sobre-mi">Sobre mí</a></li>
+
+          <li class="nav-item"><a class="nav-link" href="#habilidades">Habilidades</a></li>
+
+          <li class="nav-item"><a class="nav-link" href="#experiencia">Pasantía</a></li>
+
+          <li class="nav-item"><a class="nav-link" href="#formacion">Formación</a></li>
+
+          <li class="nav-item"><a class="nav-link" href="#contacto">Contacto</a></li>
+
+        </ul>
+
+      </div>
+
+    </div>
+
+  </nav>
+
+
+
+  <main>
+
+    <header id="inicio" class="hero-section">
+
+      <div class="container hero-content">
+
+        <div class="avatar"><img src="data:image/jpeg;base64,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" alt="Foto de Rosmeri Donacien Feinor"></div>
+
+        <div class="hero-tag"><span class="status-dot"></span> PORTAFOLIO ACADÉMICO · INFORMÁTICA</div>
+
+        <p class="hero-greeting">Hola, soy</p>
+
+        <h1>Rosmeri <span>Donacien</span><br>Feinor.</h1>
+
+        <p class="hero-description">Estudiante de Informática de 6to grado, con interés en la tecnología, el aprendizaje y el desarrollo de nuevas habilidades.</p>
+
+        <div class="d-flex flex-wrap align-items-center gap-3 hero-actions">
+
+          <a class="btn btn-main" href="#sobre-mi">Conóceme <i class="fa-solid fa-arrow-down ms-2"></i></a>
+
+          <a class="btn btn-ghost" href="#experiencia">Mi pasantía</a>
+
+          <a class="social-btn ig" href="https://www.instagram.com/_rous2606" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><svg viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.351-.2 6.78-2.618 6.98-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg></a>
+
+          <a class="social-btn wa" href="https://wa.me/18494756488" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp"><svg viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg></a>
+
+        </div>
+
+        <div class="hero-meta">
+
+          <span><i class="fa-solid fa-graduation-cap"></i> 6to grado · Informática</span>
+
+          <span><i class="fa-solid fa-location-dot"></i> Hato Nuevo, Manoguayabo</span>
+
+        </div>
+
+      </div>
+
+      <div class="hero-side-note">APRENDER · CREAR · AVANZAR</div>
+
+    </header>
+
+
+
+    <section id="sobre-mi" class="section-padding about-section">
+
+      <div class="container">
+
+        <div class="section-heading">
+
+          <span class="eyebrow">01 / SOBRE MÍ</span>
+
+          <h2>Un poco sobre <em>mi historia.</em></h2>
+
+        </div>
+
+        <div class="row g-5 align-items-center">
+
+          <div class="col-lg-7">
+
+            <p class="intro-text">Soy <strong>Rosmeri Donacien Feinor</strong>, estudiante de 6to grado de Informática en el <strong>Politécnico Profesor Víctor Pascual Agüero</strong>.</p>
+
+            <p class="body-copy">Soy responsable y curiosa, y me gusta aprender cosas nuevas sobre tecnología. Ahora estoy haciendo mi pasantía.</p>
+
+            <div class="personal-tags">
+
+              <span><i class="fa-solid fa-lightbulb"></i> Curiosidad</span>
+
+              <span><i class="fa-solid fa-book-open"></i> Aprendizaje</span>
+
+              <span><i class="fa-solid fa-list-check"></i> Responsabilidad</span>
+
+            </div>
+
+          </div>
+
+          <div class="col-lg-5">
+
+            <div class="profile-card">
+
+              <div class="profile-icon"><i class="fa-solid fa-user-graduate"></i></div>
+
+              <span class="profile-label">MI PERFIL</span>
+
+              <h3>Estudiante de<br>Informática</h3>
+
+              <div class="profile-line"></div>
+
+              <div class="profile-detail"><span>Edad</span><strong>16 años</strong></div>
+
+              <div class="profile-detail"><span>Grado</span><strong>6to · Informática</strong></div>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+
+    <section id="habilidades" class="section-padding skills-section">
+
+      <div class="container">
+
+        <div class="section-heading">
+
+          <span class="eyebrow">02 / LO QUE ME DEFINE</span>
+
+          <h2>Habilidades y <em>fortalezas.</em></h2>
+
+          <p class="section-subtitle">Cualidades que intento aplicar en mis estudios y en cada actividad que realizo.</p>
+
+        </div>
+
+        <div class="row g-4">
+
+          <div class="col-md-6 col-lg-3">
+
+            <article class="skill-card skill-card--1"><div class="skill-icon"><i class="fa-solid fa-computer"></i></div><h3>Informática</h3><p>Interés por la tecnología y por seguir desarrollando mis conocimientos digitales.</p></article>
+
+          </div>
+
+          <div class="col-md-6 col-lg-3">
+
+            <article class="skill-card skill-card--2"><div class="skill-icon"><i class="fa-solid fa-clipboard-check"></i></div><h3>Organización</h3><p>Procuro mantener la información ordenada y realizar las tareas con atención.</p></article>
+
+          </div>
+
+          <div class="col-md-6 col-lg-3">
+
+            <article class="skill-card skill-card--3"><div class="skill-icon"><i class="fa-solid fa-people-group"></i></div><h3>Colaboración</h3><p>Disposición para apoyar, comunicarme y trabajar junto a otras personas.</p></article>
+
+          </div>
+
+          <div class="col-md-6 col-lg-3">
+
+            <article class="skill-card skill-card--4"><div class="skill-icon"><i class="fa-solid fa-seedling"></i></div><h3>Superación</h3><p>Motivación para aprender de cada experiencia y mejorar constantemente.</p></article>
+
+          </div>
+
+        </div>
+
+        <div class="quote-strip"><i class="fa-solid fa-quote-left"></i><p>“Cada experiencia es una oportunidad para aprender algo nuevo y avanzar.”</p></div>
+
+      </div>
+
+    </section>
+
+
+
+    <section id="experiencia" class="section-padding experience-section">
+
+      <div class="container">
+
+        <div class="section-heading">
+
+          <span class="eyebrow">03 / EXPERIENCIA</span>
+
+          <h2>Mi experiencia en la <em>pasantía.</em></h2>
+
+          <p class="section-subtitle">Una oportunidad para aplicar la responsabilidad, la organización y los conocimientos adquiridos.</p>
+
+        </div>
+
+        <div class="internship-panel">
+
+          <div class="internship-top">
+
+            <div class="company-mark"><i class="fa-solid fa-school"></i></div>
+
+            <div>
+
+              <span class="profile-label">CENTRO DE PASANTÍA</span>
+
+              <h3>Politécnico Martín López</h3>
+
+              <p>Quita Sueño, Bajos de Haina</p>
+
+            </div>
+
+            <div class="internship-day"><i class="fa-regular fa-calendar"></i> Cada martes</div>
+
+          </div>
+
+          <div class="profile-line"></div>
+
+          <h4>Funciones que realizo</h4>
+
+          <div class="row g-3">
+
+            <div class="col-md-4">
+
+              <div class="task-item"><span>01</span><div><h5>Registro de notas</h5><p>Registro las calificaciones de los estudiantes de cada curso, procurando mantener la información organizada y correcta.</p></div></div>
+
+            </div>
+
+            <div class="col-md-4">
+
+              <div class="task-item"><span>02</span><div><h5>Control de asistencia</h5><p>Paso la asistencia por curso para llevar el control de la presencia de los estudiantes.</p></div></div>
+
+            </div>
+
+            <div class="col-md-4">
+
+              <div class="task-item"><span>03</span><div><h5>Digitación de récords</h5><p>Digito los récords de notas que solicita el centro, prestando atención a los datos y a su presentación.</p></div></div>
+
+            </div>
+
+          </div>
+
+          <div class="learning-note"><i class="fa-solid fa-star"></i><p><strong>Lo que estoy aprendiendo:</strong> manejo de información académica, digitación, organización de documentos, atención al detalle y responsabilidad en las tareas asignadas.</p></div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+
+    <section id="formacion" class="section-padding education-section">
+
+      <div class="container">
+
+        <div class="section-heading">
+
+          <span class="eyebrow">04 / FORMACIÓN</span>
+
+          <h2>Mi camino <em>académico.</em></h2>
+
+        </div>
+
+        <div class="timeline">
+
+          <div class="timeline-item">
+
+            <div class="timeline-marker"><i class="fa-solid fa-school"></i></div>
+
+            <div class="timeline-content"><span class="timeline-date">ACTUALIDAD</span><h3>6to grado · Técnico en Informática</h3><p>Politécnico Profesor Víctor Pascual Agüero</p><p class="body-copy">Formación técnica y académica en el área de Informática, mientras desarrollo mi pasantía.</p></div>
+
+          </div>
+
+          <div class="timeline-item">
+
+            <div class="timeline-marker"><i class="fa-solid fa-laptop-code"></i></div>
+
+            <div class="timeline-content"><span class="timeline-date">APRENDIZAJE CONTINUO</span><h3>Desarrollo de habilidades digitales</h3><p>Práctica y fortalecimiento de conocimientos tecnológicos.</p><p class="body-copy">Mi objetivo es seguir aprendiendo, adquirir experiencia y prepararme para nuevos retos.</p></div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+
+    <section id="contacto" class="section-padding contact-section">
+
+      <div class="container">
+
+        <div class="contact-box">
+
+          <span class="eyebrow">05 / CONTACTO</span>
+
+          <h2>Ponte en <em>contacto.</em></h2>
+
+          <p class="contact-intro">Gracias por visitar mi portafolio. Déjame tu mensaje y te responderé lo antes posible.</p>
+
+
+
+          <form class="contact-form" id="contactForm" novalidate
+
+            data-endpoint="https://formsubmit.co/ajax/donacienrosmeri@gmail.com"
+
+            action="https://formsubmit.co/donacienrosmeri@gmail.com" method="POST">
+
+            <input type="hidden" name="_subject" value="Nuevo mensaje desde tu portafolio">
+
+            <input type="hidden" name="_template" value="table">
+
+            <input type="hidden" name="_captcha" value="false">
+
+            <div class="hp-field" aria-hidden="true"><label>No llenar<input type="text" name="_honey" tabindex="-1" autocomplete="off"></label></div>
+
+
+
+            <div class="row g-3">
+
+              <div class="col-md-6">
+
+                <label for="cfNombre">Nombre</label>
+
+                <input class="form-control" id="cfNombre" name="nombre" type="text" placeholder="Tu nombre" required autocomplete="name">
+
+              </div>
+
+              <div class="col-md-6">
+
+                <label for="cfCorreo">Correo</label>
+
+                <input class="form-control" id="cfCorreo" name="email" type="email" placeholder="tucorreo@ejemplo.com" required autocomplete="email">
+
+              </div>
+
+              <div class="col-12">
+
+                <label for="cfMensaje">Mensaje</label>
+
+                <textarea class="form-control" id="cfMensaje" name="mensaje" rows="5" placeholder="Escribe aquí tu mensaje" required></textarea>
+
+              </div>
+
+              <div class="col-12 text-center">
+
+                <button class="btn btn-main" id="cfEnviar" type="submit">Enviar mensaje <i class="fa-solid fa-paper-plane ms-2"></i></button>
+
+                <p class="form-status" id="formStatus" role="status" aria-live="polite"></p>
+
+              </div>
+
+            </div>
+
+          </form>
+
+
+
+          <div class="social-row">
+
+            <a class="social-btn ig" href="https://www.instagram.com/_rous2606" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><svg viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.351-.2 6.78-2.618 6.98-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg></a>
+
+            <a class="social-btn wa" href="https://wa.me/18494756488" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp"><svg viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg></a>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+  </main>
+
+
+
+  <footer class="site-footer">
+
+    <div class="container d-flex flex-column flex-md-row justify-content-between align-items-center gap-2">
+
+      <p>© <span id="currentYear"></span> Rosmeri Donacien Feinor. Portafolio académico.</p>
+
+      <div class="footer-social">
+
+        <a class="ig" href="https://www.instagram.com/_rous2606" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><svg viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.351-.2 6.78-2.618 6.98-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg></a>
+
+        <a class="wa" href="https://wa.me/18494756488" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp"><svg viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg></a>
+
+      </div>
+
+      <p>Hecho con <i class="fa-solid fa-heart"></i> y ganas de aprender.</p>
+
+    </div>
+
+  </footer>
+
+
+
+  <button id="backToTop" class="back-to-top" type="button" aria-label="Volver arriba"><i class="fa-solid fa-arrow-up"></i></button>
+
+
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+  
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/script.js"></script>
+    <script type="module" src="script.js"></script>
+  </body>
+
+</html>
